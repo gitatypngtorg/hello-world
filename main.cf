@@ -1,4 +1,5 @@
 # See /usr/share/postfix/main.cf.dist for a commented, more complete version
+# edit
 
 
 # Debian specific:  Specifying a file name will cause the first
@@ -33,7 +34,7 @@ myhostname = mail.ypngt.org
 alias_maps = hash:/etc/aliases
 alias_database = hash:/etc/aliases
 myorigin = /etc/mailname
-mydestination = ypngt.org, mail.ypngt.org, localhost.ypngt.org, , localhost
+mydestination = ypngt.org, mail.ypngt.org, localhost.ypngt.org, localhost
 relayhost = 
 mynetworks = 185.52.3.11/32 localhost
 mailbox_size_limit = 0
@@ -64,3 +65,4 @@ smtpd_tls_CAfile = /etc/letsencrypt/live/mail.ypngt.org/fullchain.pem
 smtpd_tls_loglevel = 1
 smtpd_tls_session_cache_timeout = 3600s
 virtual_alias_maps = hash:/etc/postfix/virtual
+# content_filter = smtp-amavis:[127.0.0.1]:10024
